@@ -10,6 +10,16 @@ render(
 			<Route path="/" element={<App />}>
 				<Route path="" element={<Chat />} />
 			</Route>
+
+			{/* 404 Route */}
+			<Route
+				path="*"
+				element={
+					<main>
+						<p>There&apos;s nothing here!</p>
+					</main>
+				}
+			/>
 		</Routes>
 	</BrowserRouter>,
 	rootElement
