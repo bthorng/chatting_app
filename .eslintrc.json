@@ -6,8 +6,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+        "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -17,16 +16,31 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "plugins": [
         "react",
-        "@typescript-eslint",
-        "prettier"
+        "@typescript-eslint"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
-        "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-empty-function": "off",
-        "no-empty-function": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-extra-semi": "off",
+        "no-else-return": 1,
+        "arrow-spacing": 1,
+        "brace-style": ["warn", "stroustrup"],
+        "comma-spacing": ["warn", { "after": true}],
+        "func-call-spacing": ["warn", "never"],
+        "no-multi-spaces": ["warn", { "ignoreEOLComments": true }],
+        "no-empty": 0,
+        "no-constant-condition": 0,
+        "object-curly-spacing": ["warn", "always"],
+        "indent": ["warn", "tab"],
+        "key-spacing": 1
     }
 }
