@@ -1,0 +1,14 @@
+#message-history {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-height: 95vh;
+    max-height: 95vh;
+    padding: 16px;
+}
+
+#chat-inputs {
+    min-height: 5vh;
+    max-height: 5vh;
+    padding: 0px 16px;
+}
