@@ -40,7 +40,7 @@
         "no-empty": 0,
         "no-constant-condition": 0,
         "object-curly-spacing": ["warn", "always"],
-        "indent": ["warn", 4, "tab"],
+        "indent": [4, "tab"],
         "key-spacing": 1
     }
 }

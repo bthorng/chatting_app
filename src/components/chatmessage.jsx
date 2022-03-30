@@ -23,7 +23,7 @@ export class ChatMessage extends Component {
                     ></div>
 					<Stack width={"96%"}>
 						<div style={{ wordWrap: "break-word" }}>
-							{messageObject.username}&nbsp;&nbsp;<span className="text-muted" style={{fontSize: "0.80em"}}>{messageObject.timestamp}</span>
+							{messageObject.username}&nbsp;&nbsp;<span className="text-muted" style={{ fontSize: "0.80em" }}>{messageObject.timestamp}</span>
 						</div>
 						<div style={{ wordWrap: "break-word" }}>
 							{messageObject.message}
