@@ -13,7 +13,7 @@ export class ChatMessage extends Component {
         const messageObject = this.props.messageObject;
         
 		return(
-			<Stack spacing={3}>
+			<Stack spacing={3} marginBottom={2}>
 				<Stack direction="row" spacing={2.5}>
 					<div
                         style={{
