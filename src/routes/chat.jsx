@@ -7,9 +7,12 @@ import { useState } from 'react';
 export default function Chat() {
 	const [messages, setMessages] = useState([])
 
-	const addMessage = function () {
-		var newMsg = { "id": uuid(), "profilePicture": "https://i.pinimg.com/originals/46/d7/28/46d728a7174bda1bcbbdbc8023629c77.jpg", "username": "Example Username", "timestamp": "Today at 12:08 AM", "message": "Yooooo example message lmaooo" }
-		setMessages(oldState => [...oldState, newMsg])
+	const addMessage = function(e) {
+		if (e.key === "Enter") {
+			var newMsg = { "id": uuid(), "profilePicture": "https://i.pinimg.com/originals/46/d7/28/46d728a7174bda1bcbbdbc8023629c77.jpg", "username": "Example Username", "timestamp": "Today at 12:08 AM", "message": e.target.value }
+			setMessages(oldState => [...oldState, newMsg])
+			e.target.value = ""
+		}
 	}
 	
 	return (
