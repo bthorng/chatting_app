@@ -33,9 +33,9 @@ const StyledInputElement = styled('input')(`
 	}
 `,);
 
-const CustomInput = React.forwardRef(function CustomInput(props, ref) {
+const ChatInput = React.forwardRef(function CustomInput(props, ref) {
 	const { getRootProps, getInputProps } = useInput(props, ref);
-	
+
 	return (
 		<div {...getRootProps()}>
 			<StyledInputElement {...props} {...getInputProps()} />
@@ -43,6 +43,4 @@ const CustomInput = React.forwardRef(function CustomInput(props, ref) {
 	);
 });
 
-export default function ChatInput() {
-	return <CustomInput placeholder="Send message" />;
-}
+export default ChatInput;
