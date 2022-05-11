@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import { useInput } from '@mui/base';
 import { styled } from '@mui/system';
 
@@ -33,14 +33,16 @@ const StyledInputElement = styled('input')(`
 	}
 `,);
 
-const ChatInput = React.forwardRef(function CustomInput(props, ref) {
-	const { getRootProps, getInputProps } = useInput(props, ref);
-
-	return (
-		<div {...getRootProps()}>
-			<StyledInputElement {...props} {...getInputProps()} />
-		</div>
-	);
-});
-
-export default ChatInput;
+export class ChatInput extends Component {
+	constructor(props) {
+		super(props)
+	}
+	
+	render () {
+		return (
+			<div>
+				<StyledInputElement {...this.props} />
+			</div>
+		);
+	}
+}
